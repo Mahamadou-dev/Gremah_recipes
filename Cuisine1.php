@@ -33,26 +33,26 @@
         $recipes = [
             [
                 'title' => 'Cassoulet',
+                'recipe' => 'Etape 1 : des flageolets !',
                 'author' => 'mickael.andrieu@exemple.com',
+                'is_enabled' => true,
             ],
             [
                 'title' => 'Couscous',
+                'recipe' => 'Etape 1 : de la semoule',
                 'author' => 'mickael.andrieu@exemple.com',
+                'is_enabled' => false,
             ],
             [
                 'title' => 'Escalope milanaise',
+                'recipe' => 'Etape 1 : prenez une belle escalope',
                 'author' => 'mathieu.nebra@exemple.com',
-            ],
-            [
-                'title' => 'Salade Romaine',
-                'author' => 'laurene.castor@exemple.com',
+                'is_enabled' => true,
             ],
         ];
-        $lines2 = 4; // nombre d'utilisateurs dans le tableau
-        $counter2 = 0;
-        while ($counter2 < $lines2) {
-            echo $recipes[$counter2]['title'] . ' ' . $recipes[$counter2]['author'] . '<br />';
-            $counter2++;
+        
+        foreach ($recipes as $recipe) {
+            echo $recipe['title'] . ' ' . $recipe['author'] . '<br />';
         }
     ?>
     
